@@ -1,0 +1,23 @@
+# Covers AC-AV-3 and AC-AV-6. Run with light/dark appearance and enlarged text.
+# Requires LOCAL QA fixture and an active schedule; screenshots require visual review.
+appId: ar.kevan.parte
+---
+- launchApp:
+    clearState: false
+- extendedWaitUntil:
+    visible: "Tu disponibilidad: Disponible"
+    timeout: 60000
+- tapOn: "Tu disponibilidad: Disponible"
+- assertVisible: "Tu disponibilidad"
+- takeScreenshot: availability-sheet-light-xl
+- tapOn: "Volver al horario automático"
+- extendedWaitUntil:
+    visible: "Tu disponibilidad: Disponible"
+    timeout: 60000
+- tapOn: "Abrir menú"
+- tapOn: "Jornadas"
+- tapOn: "availability-qa@example.com.*"
+- assertVisible: "Días laborables"
+- takeScreenshot: availability-schedule-light-xl
+- tapOn: "08:00"
+- takeScreenshot: availability-schedule-field-light-xl

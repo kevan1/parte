@@ -1,0 +1,96 @@
+{
+  "expo": {
+    "name": "Parte",
+    "slug": "parte",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "parte",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F6F2"
+    },
+    "ios": {
+      "bundleIdentifier": "ar.kevan.parte",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "Parte usa tu ubicación para asociar registros de trabajo con el lugar donde se realizaron.",
+        "NSMicrophoneUsageDescription": "Parte usa el micrófono para convertir tus notas de voz en registros de horas.",
+        "NSSpeechRecognitionUsageDescription": "Parte usa reconocimiento de voz para transcribir tus notas de trabajo.",
+        "NSPhotoLibraryUsageDescription": "Parte accede a tus fotos para adjuntarlas al registro de trabajo."
+      }
+    },
+    "android": {
+      "package": "ar.kevan.parte",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#11130F"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Parte accede a tus fotos para mostrar imágenes adjuntas al registro de trabajo."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Parte usa tu ubicación para asociar registros de trabajo con el lugar donde se realizaron."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Parte usa el micrófono para convertir tus notas de voz en registros de horas.",
+          "speechRecognitionPermission": "Parte usa reconocimiento de voz para transcribir tus notas de trabajo.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox"
+          ]
+        }
+      ],
+      "expo-notifications",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F5F6F2",
+          "dark": {
+            "backgroundColor": "#11130F"
+          }
+        }
+      ],
+      [
+        "react-native-nano-icons",
+        {
+          "iconSets": [
+            {
+              "inputDir": "./src/assets/icons/svg",
+              "outputDir": "./src/assets/icons/nanoicons"
+            }
+          ]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {}
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

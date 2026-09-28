@@ -1,0 +1,1 @@
+-- The MVP intentionally ships without shared seed data.

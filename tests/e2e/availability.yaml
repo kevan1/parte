@@ -1,0 +1,22 @@
+# Covers AC-AV-2 and AC-AV-3.
+# Requires an authenticated LOCAL QA employee with an active work schedule.
+# Changes only that fixture; finishes in automatic mode.
+appId: ar.kevan.parte
+---
+- launchApp:
+    clearState: false
+- tapOn: "Tu disponibilidad: Disponible"
+- tapOn: "Remoto,.*"
+- extendedWaitUntil:
+    visible: "Tu disponibilidad: Remoto"
+    timeout: 60000
+- tapOn: "Tu disponibilidad: Remoto"
+- tapOn: "Disponible, Se mantendrá.*"
+- extendedWaitUntil:
+    visible: "Tu disponibilidad: Disponible · Manual"
+    timeout: 60000
+- tapOn: "Tu disponibilidad: Disponible · Manual"
+- tapOn: "Volver al horario automático"
+- extendedWaitUntil:
+    visible: "Tu disponibilidad: Disponible"
+    timeout: 60000

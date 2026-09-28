@@ -1,0 +1,19 @@
+# Covers AC-AV-4. Requires LOCAL admin fixture and running local API.
+# Isolated LOCAL administrator fixture only.
+appId: ar.kevan.parte
+---
+- launchApp:
+    clearState: false
+- tapOn: "Abrir menú"
+- assertVisible: "Abrir perfil de.*"
+- assertVisible: "Jornadas"
+- tapOn: "Jornadas"
+- tapOn: "availability-qa@example.com.*"
+- assertVisible: "Días laborables"
+- scrollUntilVisible:
+    element: "Guardar jornada"
+    direction: DOWN
+- tapOn: "Guardar jornada"
+- extendedWaitUntil:
+    visible: "Seleccioná un empleado para configurar su jornada."
+    timeout: 60000

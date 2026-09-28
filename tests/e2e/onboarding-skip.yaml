@@ -1,0 +1,20 @@
+# Run on an isolated simulator at onboarding step 1. Never reset a real user session.
+# Covers AC-ON-2, AC-ON-3, AC-ON-6.
+appId: ar.kevan.parte
+---
+- extendedWaitUntil:
+    visible: "Continuar"
+    timeout: 60000
+- takeScreenshot: onboarding-final-step1-dark-xl
+- tapOn: "Continuar"
+- takeScreenshot: onboarding-final-step2-dark-xl
+- tapOn: "Anterior"
+- assertVisible: "Ejemplo de nota:.*"
+- tapOn: "Continuar"
+- tapOn: "Continuar"
+- assertVisible: "Ingresar con mi email"
+- takeScreenshot: onboarding-final-step3-dark-xl
+- tapOn: "Anterior"
+- tapOn: "Omitir"
+- assertVisible: "Ingresá tu email"
+- takeScreenshot: onboarding-skip-sign-in
