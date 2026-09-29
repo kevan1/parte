@@ -1,7 +1,7 @@
 # Start at the email screen in an isolated simulator. Does not send an email.
 # AC-KB-1 evidence capture: inspect screenshot for keyboard occlusion.
 # Maestro visibility alone does not detect keyboard overlap on this runtime.
-appId: ar.kevan.parte
+appId: ar.kevan.horas
 ---
 - tapOn: "Email laboral"
 - assertVisible: "Enviar enlace y código"

@@ -27,7 +27,7 @@ it('only sends to the token acquired for this device and project', async () => {
   mockFetch.mockResolvedValue(reply({ data: { status: 'ok', id: 'ticket-1' } }));
   await expect(sendTestPush()).resolves.toEqual({ ticketId: 'ticket-1' });
   expect(Notifications.getExpoPushTokenAsync).toHaveBeenCalledWith({ projectId: 'project-own' });
-  expect(JSON.parse(mockFetch.mock.calls[0][1].body)).toMatchObject({ to: 'ExponentPushToken[own-device]', title: 'Parte', body: 'Esta es tu notificación de prueba.' });
+  expect(JSON.parse(mockFetch.mock.calls[0][1].body)).toMatchObject({ to: 'ExponentPushToken[own-device]', title: 'Horas', body: 'Esta es tu notificación de prueba.' });
 });
 
 it('rejects concurrent sends across callers and releases the lock after completion', async () => {

@@ -16,7 +16,7 @@ describe('magic-link auth service [AC-1, AC-2]', () => {
 
     expect(signInWithOtp).toHaveBeenCalledWith({
       email: 'empleado@empresa.com',
-      options: { emailRedirectTo: 'parte://auth/callback' },
+      options: { emailRedirectTo: 'horas://auth/callback' },
     });
   });
 
@@ -44,8 +44,8 @@ describe('magic-link auth service [AC-1, AC-2]', () => {
       },
     });
 
-    await service.exchangeCallback('parte://auth/callback?code=abc123');
-    await service.exchangeCallback('parte://auth/callback?code=abc123');
+    await service.exchangeCallback('horas://auth/callback?code=abc123');
+    await service.exchangeCallback('horas://auth/callback?code=abc123');
 
     expect(exchangeCodeForSession).toHaveBeenCalledTimes(1);
     expect(exchangeCodeForSession).toHaveBeenCalledWith('abc123');
@@ -64,7 +64,7 @@ describe('magic-link auth service [AC-1, AC-2]', () => {
       },
     });
 
-    await service.exchangeCallback('parte://auth/callback?token=pkce_123&type=magiclink');
+    await service.exchangeCallback('horas://auth/callback?token=pkce_123&type=magiclink');
 
     expect(exchangeCodeForSession).toHaveBeenCalledWith('pkce_123');
     expect(verifyOtp).not.toHaveBeenCalled();
@@ -101,7 +101,7 @@ describe('magic-link auth service [AC-1, AC-2]', () => {
       },
     });
 
-    await service.exchangeCallback('parte://auth/callback?token_hash=tokhash&type=email');
+    await service.exchangeCallback('horas://auth/callback?token_hash=tokhash&type=email');
 
     expect(verifyOtp).toHaveBeenCalledWith({
       token_hash: 'tokhash',
@@ -120,7 +120,7 @@ describe('magic-link auth service [AC-1, AC-2]', () => {
       },
     });
 
-    await expect(service.exchangeCallback('parte://auth/callback')).rejects.toThrow('código');
+    await expect(service.exchangeCallback('horas://auth/callback')).rejects.toThrow('código');
     await service.signOut();
     expect(signOut).toHaveBeenCalledWith({ scope: 'global' });
   });

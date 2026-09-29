@@ -1,6 +1,6 @@
 # Covers AC-AV-4. Requires LOCAL admin fixture and running local API.
 # Isolated LOCAL administrator fixture only.
-appId: ar.kevan.parte
+appId: ar.kevan.horas
 ---
 - launchApp:
     clearState: false

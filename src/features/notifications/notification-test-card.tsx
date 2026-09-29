@@ -55,7 +55,7 @@ export function NotificationTestCard() {
     </Pressable> : null}
     {message ? <Text accessibilityLiveRegion="polite" style={styles.detail}>{message}</Text> : null}
     {error ? <Text accessibilityRole="alert" style={styles.error}>{error}</Text> : null}
-    <Pressable accessibilityRole="button" onPress={() => void Linking.openSettings().catch(() => { if (mounted.current) setError('Abrí Ajustes y buscá Parte para revisar los permisos.'); })} style={styles.settings}>
+    <Pressable accessibilityRole="button" onPress={() => void Linking.openSettings().catch(() => { if (mounted.current) setError('Abrí Ajustes y buscá Horas para revisar los permisos.'); })} style={styles.settings}>
       <Text style={styles.detail}>Abrir ajustes de la app</Text>
     </Pressable>
   </View>;

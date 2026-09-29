@@ -13,7 +13,7 @@ describe('onboarding persistence [AC-ON-3, AC-ON-4, AC-ON-5]', () => {
     const getItem = jest.fn().mockResolvedValue(value);
     const store = createOnboardingStore({ getItem, setItem: jest.fn() });
     await store.getState().hydrate();
-    expect(getItem).toHaveBeenCalledWith('parte.onboarding.completed');
+    expect(getItem).toHaveBeenCalledWith('horas.onboarding.completed');
     expect(store.getState()).toMatchObject({ completed, status: 'ready', loading: false });
   });
 
@@ -43,7 +43,7 @@ describe('onboarding persistence [AC-ON-3, AC-ON-4, AC-ON-5]', () => {
     expect(store.getState().completed).toBe(false);
     pending.resolve();
     await Promise.all([a, b]);
-    expect(setItem).toHaveBeenCalledWith('parte.onboarding.completed', '1');
+    expect(setItem).toHaveBeenCalledWith('horas.onboarding.completed', '1');
     expect(store.getState().completed).toBe(true);
   });
 

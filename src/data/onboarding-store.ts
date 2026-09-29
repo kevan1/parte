@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { secureSessionStorage } from '@/data/secure-storage';
 
-const ONBOARDING_COMPLETED_KEY = 'parte.onboarding.completed';
+const ONBOARDING_COMPLETED_KEY = 'horas.onboarding.completed';
 
 type OnboardingStorage = Pick<typeof secureSessionStorage, 'getItem' | 'setItem'>;
 type OnboardingState = {

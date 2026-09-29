@@ -81,7 +81,7 @@ export function CaptureScreen() {
   }, []);
   const isEmpty = turns.length === 0 && drafts.length === 0;
   const openStreamsSkeletonIndexes = Array.from({ length: OPEN_STREAMS_SKELETON_COUNT }, (_, index) => index);
-  const captureHeaderTitle = attachmentMode === 'closed' ? 'Parte' : attachmentMode === 'photos' ? 'Fotos' : 'Adjuntos';
+  const captureHeaderTitle = attachmentMode === 'closed' ? 'Horas' : attachmentMode === 'photos' ? 'Fotos' : 'Adjuntos';
 
   useEffect(() => {
     return () => {

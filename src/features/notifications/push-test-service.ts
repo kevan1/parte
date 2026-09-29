@@ -6,7 +6,7 @@ export type PushTestErrorCode = 'permission-denied' | 'missing-project' | 'timeo
 
 const messages: Record<PushTestErrorCode, string> = {
   'in-progress': 'Ya hay una prueba en curso. Esperá a que termine antes de volver a enviar.',
-  'permission-denied': 'Activá las notificaciones de Parte en Ajustes y volvé a intentar.',
+  'permission-denied': 'Activá las notificaciones de Horas en Ajustes y volvé a intentar.',
   'missing-project': 'Esta versión no tiene configurado el proyecto de notificaciones. Actualizá la app.',
   timeout: 'La conexión tardó demasiado. Revisá tu conexión antes de volver a intentar; el envío podría haberse realizado.',
   network: 'No se pudo consultar el servicio de notificaciones. Revisá tu conexión.',
@@ -93,7 +93,7 @@ export async function sendTestPush(): Promise<{ ticketId: string }> {
     const token = await bounded(Notifications.getExpoPushTokenAsync({ projectId }));
     if (typeof token.data !== 'string' || !/^(ExponentPushToken|ExpoPushToken)\[[^\]]+\]$/.test(token.data)) throw new PushTestError('invalid-response');
     const ticket = await post('send', {
-      to: token.data, title: 'Parte', body: 'Esta es tu notificación de prueba.',
+      to: token.data, title: 'Horas', body: 'Esta es tu notificación de prueba.',
       sound: 'default', channelId: 'default', data: { type: 'self-device-push-test' },
     });
     if (ticket.status === 'error') rejectTicket(ticket);

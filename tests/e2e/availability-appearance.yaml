@@ -1,6 +1,6 @@
 # Covers AC-AV-3 and AC-AV-6. Run with light/dark appearance and enlarged text.
 # Requires LOCAL QA fixture and an active schedule; screenshots require visual review.
-appId: ar.kevan.parte
+appId: ar.kevan.horas
 ---
 - launchApp:
     clearState: false

@@ -108,7 +108,7 @@ export default function SignInRoute() {
           }}
         />
         <Text selectable style={{ color: uiColors.label, fontSize: 22, fontWeight: '700' }}>
-          Parte
+          Horas
         </Text>
       </View>
 

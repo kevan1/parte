@@ -1,15 +1,15 @@
-# Parte
+# Horas
 
 **Log your work hours by chatting. Gemini turns a quick message into reviewable time entries.**
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/hero-dark.png">
-    <img alt="Parte: chat capture, weekly history and assigned tasks" src="docs/screenshots/hero-light.png" width="900">
+    <img alt="Horas: chat capture, weekly history and assigned tasks" src="docs/screenshots/hero-light.png" width="900">
   </picture>
 </p>
 
-Parte is an iOS-first mobile app (Expo + React Native) for employees who need to report
+Horas is an iOS-first mobile app (Expo + React Native) for employees who need to report
 what they worked on without filling in a timesheet. You write or dictate something like
 *"Hoy de 9 a 11 revisé la válvula dosificadora en la línea de llenado y después 1 hora y
 media lubricando la cinta 2"*. A Supabase Edge Function asks Gemini for structured drafts,
@@ -182,7 +182,7 @@ supabase secrets set GEMINI_API_KEY=<your-gemini-key>
 supabase functions deploy extract-time-entries
 ```
 
-In **Authentication → URL Configuration**, add `parte://auth/callback` as a redirect URL.
+In **Authentication → URL Configuration**, add `horas://auth/callback` as a redirect URL.
 To give a user admin rights (schedules and task assignment):
 
 ```sql

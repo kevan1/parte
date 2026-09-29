@@ -17,7 +17,7 @@ describe('authenticated app menu [AC-SM-3, AC-SM-4]', () => {
       />,
     );
 
-    expect(view.getByText('Parte')).toBeTruthy();
+    expect(view.getByText('Horas')).toBeTruthy();
     expect(view.getByLabelText('Registrar horas').props.accessibilityState).toEqual({
       selected: false,
     });

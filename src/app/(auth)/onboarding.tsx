@@ -79,7 +79,7 @@ export default function OnboardingRoute() {
     >
       <Stack.Screen options={{
         headerShown: true,
-        title: 'Parte',
+        title: 'Horas',
         headerShadowVisible: false,
         headerStyle: { backgroundColor: colors.background },
         headerRight: () => (

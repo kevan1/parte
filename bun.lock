@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "parte",
+      "name": "horas",
       "dependencies": {
         "@expo/ui": "57.0.13",
         "@react-native-community/datetimepicker": "9.1.0",

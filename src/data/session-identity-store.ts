@@ -1,6 +1,6 @@
 import { secureSessionStorage } from '@/data/secure-storage';
 
-const SESSION_IDENTITY_KEY = 'parte.lastSessionIdentity';
+const SESSION_IDENTITY_KEY = 'horas.lastSessionIdentity';
 
 export type SessionIdentity = {
   userId: string;

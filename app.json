@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Parte",
-    "slug": "parte",
+    "name": "Horas",
+    "slug": "horas",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "parte",
+    "scheme": "horas",
     "userInterfaceStyle": "automatic",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,18 +13,18 @@
       "backgroundColor": "#F5F6F2"
     },
     "ios": {
-      "bundleIdentifier": "ar.kevan.parte",
+      "bundleIdentifier": "ar.kevan.horas",
       "supportsTablet": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSLocationWhenInUseUsageDescription": "Parte usa tu ubicación para asociar registros de trabajo con el lugar donde se realizaron.",
-        "NSMicrophoneUsageDescription": "Parte usa el micrófono para convertir tus notas de voz en registros de horas.",
-        "NSSpeechRecognitionUsageDescription": "Parte usa reconocimiento de voz para transcribir tus notas de trabajo.",
-        "NSPhotoLibraryUsageDescription": "Parte accede a tus fotos para adjuntarlas al registro de trabajo."
+        "NSLocationWhenInUseUsageDescription": "Horas usa tu ubicación para asociar registros de trabajo con el lugar donde se realizaron.",
+        "NSMicrophoneUsageDescription": "Horas usa el micrófono para convertir tus notas de voz en registros de horas.",
+        "NSSpeechRecognitionUsageDescription": "Horas usa reconocimiento de voz para transcribir tus notas de trabajo.",
+        "NSPhotoLibraryUsageDescription": "Horas accede a tus fotos para adjuntarlas al registro de trabajo."
       }
     },
     "android": {
-      "package": "ar.kevan.parte",
+      "package": "ar.kevan.horas",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#11130F"
@@ -41,20 +41,20 @@
       [
         "expo-media-library",
         {
-          "photosPermission": "Parte accede a tus fotos para mostrar imágenes adjuntas al registro de trabajo."
+          "photosPermission": "Horas accede a tus fotos para mostrar imágenes adjuntas al registro de trabajo."
         }
       ],
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Parte usa tu ubicación para asociar registros de trabajo con el lugar donde se realizaron."
+          "locationWhenInUsePermission": "Horas usa tu ubicación para asociar registros de trabajo con el lugar donde se realizaron."
         }
       ],
       [
         "expo-speech-recognition",
         {
-          "microphonePermission": "Parte usa el micrófono para convertir tus notas de voz en registros de horas.",
-          "speechRecognitionPermission": "Parte usa reconocimiento de voz para transcribir tus notas de trabajo.",
+          "microphonePermission": "Horas usa el micrófono para convertir tus notas de voz en registros de horas.",
+          "speechRecognitionPermission": "Horas usa reconocimiento de voz para transcribir tus notas de trabajo.",
           "androidSpeechServicePackages": [
             "com.google.android.googlequicksearchbox"
           ]

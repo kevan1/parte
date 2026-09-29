@@ -93,7 +93,7 @@ export function AppMenu({
       ]}
     >
       <Text selectable style={styles.title}>
-        Parte
+        Horas
       </Text>
       <Text selectable style={styles.subtitle}>
         Navegación

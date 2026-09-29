@@ -1,6 +1,6 @@
 # Run on an isolated simulator at onboarding step 1. Never reset a real user session.
 # Covers AC-ON-2, AC-ON-3, AC-ON-6.
-appId: ar.kevan.parte
+appId: ar.kevan.horas
 ---
 - extendedWaitUntil:
     visible: "Continuar"

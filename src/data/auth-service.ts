@@ -15,7 +15,7 @@ type AuthClient = {
   };
 };
 
-const APP_CALLBACK_SCHEME = 'parte';
+const APP_CALLBACK_SCHEME = 'horas';
 const APP_CALLBACK_URL = `${APP_CALLBACK_SCHEME}://auth/callback`;
 const SIX_DIGIT_OTP = /^\d{6}$/;
 
@@ -62,7 +62,7 @@ export function createAuthService(client: AuthClient) {
         callback.hostname !== 'auth' ||
         callback.pathname !== '/callback'
       ) {
-        throw new Error('El enlace no pertenece a Parte.');
+        throw new Error('El enlace no pertenece a Horas.');
       }
       const code = callback.searchParams.get('code');
       const token = callback.searchParams.get('token');

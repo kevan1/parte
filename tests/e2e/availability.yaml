@@ -1,7 +1,7 @@
 # Covers AC-AV-2 and AC-AV-3.
 # Requires an authenticated LOCAL QA employee with an active work schedule.
 # Changes only that fixture; finishes in automatic mode.
-appId: ar.kevan.parte
+appId: ar.kevan.horas
 ---
 - launchApp:
     clearState: false
